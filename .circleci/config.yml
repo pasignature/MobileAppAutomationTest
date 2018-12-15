@@ -43,4 +43,4 @@ jobs:
           path: app/build/outputs
           destination: outputs
       - store_test_results:
-path: app/build/test-results
+          path: app/build/test-results
