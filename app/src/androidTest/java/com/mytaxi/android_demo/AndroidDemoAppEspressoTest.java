@@ -54,7 +54,7 @@ public class AndroidDemoAppEspressoTest {
 
     @Test
     public void shouldLoginSearchAutocompleteAndCallDriver() {
-        //type in username
+        //type in username //hardcoding is fine for demo ONLY
         onView(withId(R.id.edt_username)).perform(typeText("crazydog335"));
 
         //type in password and close the Soft Keyboard
@@ -64,16 +64,14 @@ public class AndroidDemoAppEspressoTest {
         //click login button
         onView(withId(R.id.btn_login)).perform(click());
 
-        //wait for background task to return //better to use idling resources but overkill here.
-        SystemClock.sleep(1000);
-
         //resume the activity after successful login
         ActivityTestRule<MainActivity> mActivityRule
                 = new ActivityTestRule<>(MainActivity.class, true, false);
         mActivityRule.launchActivity(null);
 
-        //wait for activity to switch/resume and search box to be loaded
-        SystemClock.sleep(1000);
+        //better to use idling resources but overkill here.
+        //wait for activity to resume after authentication and search box to be loaded
+        SystemClock.sleep(2000);
 
         //type "sa" to trigger driver name suggestions
         onView(withId(R.id.textSearch)).perform(typeText("sa"),
