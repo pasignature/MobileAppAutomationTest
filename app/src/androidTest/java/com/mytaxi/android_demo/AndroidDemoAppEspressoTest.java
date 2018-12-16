@@ -58,7 +58,7 @@ public class AndroidDemoAppEspressoTest {
         onView(withId(R.id.edt_username)).perform(typeText("crazydog335"));
 
         //type in password and close the Soft Keyboard
-        onView(withId(R.id.edt_password)).perform(typeText("venture"),
+        onView(withId(R.id.edt_password)).perform(typeText("venture2"),
                 closeSoftKeyboard());
 
         //click login button
