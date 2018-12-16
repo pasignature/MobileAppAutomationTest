@@ -55,10 +55,10 @@ public class AndroidDemoAppEspressoTest {
     @Test
     public void shouldLoginSearchAutocompleteAndCallDriver() {
         //type in username
-        onView(withId(R.id.edt_username)).perform(typeText("crazydog335"));
+        onView(withId(R.id.textSearch)).perform(typeText("crazydog335"));
 
         //type in password and close the Soft Keyboard
-        onView(withId(R.id.edt_password)).perform(typeText("venture2"),
+        onView(withId(R.id.edt_password)).perform(typeText("venture"),
                 closeSoftKeyboard());
 
         //click login button
