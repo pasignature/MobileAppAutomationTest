@@ -64,7 +64,7 @@ public class AndroidDemoAppEspressoTest {
         //click login button
         onView(withId(R.id.btn_login)).perform(click());
 
-        //wait for background task to return //better to use idling resources but overkill here
+        //wait for background task to return //better to use idling resources but overkill here.
         SystemClock.sleep(1000);
 
         //resume the activity after successful login
